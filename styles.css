@@ -1,0 +1,7 @@
+.dataview-toggle-status {
+	cursor: pointer;
+}
+
+.dataview-toggle-status.dataview-toggle-paused {
+	color: var(--text-error);
+}
