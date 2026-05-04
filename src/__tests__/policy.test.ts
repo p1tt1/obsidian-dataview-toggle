@@ -124,7 +124,7 @@ describe("command ID format", () => {
 	it("no addCommand id starts with the plugin id as a prefix", () => {
 		const mainTs = readFileSync(join(ROOT, "src/main.ts"), "utf-8");
 		const matches = [...mainTs.matchAll(/addCommand\s*\(\s*\{[\s\S]*?id\s*:\s*"([^"]+)"/g)];
-		const commandIds = matches.map((m) => m[1]);
+		const commandIds = matches.map((m) => m[1]).filter((id): id is string => id !== undefined);
 
 		expect(commandIds.length).toBeGreaterThan(0);
 
@@ -140,8 +140,8 @@ const SEMVER_RE = /^\d+\.\d+\.\d+$/;
 
 function semverGte(a: string, b: string): boolean {
 	const parse = (v: string): [number, number, number] => {
-		const [maj, min, pat] = v.split(".").map(Number);
-		return [maj, min, pat];
+		const parts = v.split(".").map(Number);
+		return [parts[0] ?? 0, parts[1] ?? 0, parts[2] ?? 0];
 	};
 	const [aMaj, aMin, aPat] = parse(a);
 	const [bMaj, bMin, bPat] = parse(b);
