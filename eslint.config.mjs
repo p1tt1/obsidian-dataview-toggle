@@ -10,6 +10,7 @@ export default tseslint.config(
     rules: {
       "no-unsanitized/method": "error",
       "no-unsanitized/property": "error",
+      "@typescript-eslint/require-await": "error",
     },
   },
   {

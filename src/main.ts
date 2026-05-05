@@ -33,7 +33,7 @@ export default class DataviewTogglePlugin extends Plugin {
 	private globalIsPaused = false;
 	private noteOverrideActive = false;
 
-	async onload(): Promise<void> {
+	onload(): void {
 		this.statusBarEl = this.addStatusBarItem();
 		this.statusBarEl.addClass("dataview-toggle-status");
 		this.registerDomEvent(this.statusBarEl, "click", () => this.toggle());
@@ -59,7 +59,7 @@ export default class DataviewTogglePlugin extends Plugin {
 		}
 	}
 
-	private async toggle(): Promise<void> {
+	private toggle(): void {
 		const dv = getDataviewPlugin(this.app as never);
 		if (!dv) {
 			new Notice("Dataview plugin is not available");
