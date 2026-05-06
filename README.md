@@ -34,6 +34,13 @@ The override is temporary. When you navigate away from the note, the global sett
 
 ## Installation
 
+### Via BRAT (beta)
+
+1. Install [BRAT](https://github.com/TfTHacker/obsidian42-brat) from Community Plugins
+2. Open the command palette and run `BRAT: Add a beta plugin for testing`
+3. Enter `p1tt1/obsidian-dataview-toggle`
+4. Click "Add Plugin", then enable the plugin in Settings > Community plugins
+
 ### From Community Plugins (once published)
 
 1. Open Settings > Community plugins > Browse
