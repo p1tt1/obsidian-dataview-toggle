@@ -1,6 +1,6 @@
 {
 	"name": "obsidian-dataview-toggle",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "Toggle Dataview auto-refresh on/off from the status bar or command palette.",
 	"main": "main.js",
 	"type": "module",
@@ -17,7 +17,9 @@
 		"pre-commit": "npx lint-staged"
 	},
 	"lint-staged": {
-		"src/**/*.ts": ["eslint --max-warnings 0"]
+		"src/**/*.ts": [
+			"eslint --max-warnings 0"
+		]
 	},
 	"keywords": [],
 	"license": "MIT",

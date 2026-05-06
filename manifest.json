@@ -1,7 +1,7 @@
 {
 	"id": "dataview-toggle",
 	"name": "Dataview Toggle",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"minAppVersion": "0.15.0",
 	"description": "Toggle Dataview auto-refresh on/off from the status bar or command palette.",
 	"author": "p1tt1",
